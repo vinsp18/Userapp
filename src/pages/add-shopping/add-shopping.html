@@ -1,0 +1,24 @@
+
+<ion-header>
+ 
+  <ion-navbar color="primary">
+    <ion-title>Location of nearby Ambulance</ion-title>
+  
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <!-- Repeat the ion-item for as many items that we have inside of our shopping list. -->
+    <ion-item *ngFor="let item of locationItemRef$ | async">
+      <h2>Latitude: {{item.latitude}}</h2>
+      <h2>Longitude: {{item.longitude}}</h2>
+    
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>
